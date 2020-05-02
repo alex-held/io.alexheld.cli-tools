@@ -1,9 +1,9 @@
-rootProject.name = "io.alexheld.cli-tools"
+rootProject.name = "cli-tools"
 
 
 include(":git-sync-runner")
-include(":shared")
-include(":shared:src")
+
+enableFeaturePreview("GRADLE_METADATA")
 
 
 
@@ -11,22 +11,6 @@ val hostOs = System.getProperty("os.name")
 val isMacos = hostOs == "Mac OS X"
 val isLinux = hostOs == "Linux"
 val isWindows = hostOs.startsWith("Windows")
-
-
-
-
-
-
-
-
-
-/*
-
-val hostOs = System.getProperty("os.name")
-val isMacos = hostOs == "Mac OS X"
-val isLinux = hostOs == "Linux"
-val isWindows = hostOs.startsWith("Windows")
-
 
 
 /*
@@ -81,19 +65,9 @@ if (isWindows) {
 
 
 
-
-rootProject.name = "cli-tools"
-
-include(":../shared")
+//include(":../shared")
 
 
-val hostOs = System.getProperty("os.name")
-val isMacos = hostOs == "Mac OS X"
-val isLinux = hostOs == "Linux"
-val isWindows = hostOs.startsWith("Windows")
-
-
-*/
 /*
  * The following projects are only available for certain platforms.
  *

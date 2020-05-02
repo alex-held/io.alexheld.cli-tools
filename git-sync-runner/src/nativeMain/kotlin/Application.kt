@@ -1,6 +1,8 @@
+package io.alexheld.`cli-tools`.`git-sync-runner`
+
 fun main() {
 
-    baz("git tool", "ist", "voll")
+    System.out.println("Main")
 }
 
 

@@ -1,6 +1,6 @@
 
 
-package io.alexheld.`cli-tools`.buildSrc
+package main.kotlin
 
 
 

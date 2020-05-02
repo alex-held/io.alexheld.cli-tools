@@ -1,15 +1,36 @@
+import org.gradle.plugins.ide.idea.model.*
 
 
 plugins {
-    id("org.jetbrains.kotlin.multiplatform") version "1.3.72"
-    id("org.jetbrains.kotlin.kapt") version "1.3.72"
-    id("org.jetbrains.gradle.plugin.idea-ext") version "0.7"
+
     java
-    idea
+    application
+    id("org.jetbrains.gradle.plugin.idea-ext") version "0.7"
+
 }
 
 
-repositories() {
-    mavenCentral()
-    jcenter()
+application.mainClassName = "io.Applicationkt"
+
+
+
+idea {
+    val rootDirectory = rootProject.rootDir.absolutePath
+
+    project  {
+        val modules = modules.forEachIndexed { index, ideaModule ->
+            println("""
+                Modul 1:
+                Name:              ${ideaModule.name}
+                ContentRoot:       ${ideaModule.contentRoot}
+                Source Dirs:       ${ideaModule.sourceDirs.joinToString("\n")}
+                Path variables:    ${ideaModule.pathVariables}
+                Language Level:    ${ideaModule.languageLevel}
+            """.trimIndent())
+        }
+        languageLevel = IdeaLanguageLevel("12")
+
+        modul
+    }
+
 }
