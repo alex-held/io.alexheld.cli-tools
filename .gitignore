@@ -1,0 +1,7 @@
+/buildSrc/build/libs/buildSrc.jar
+/buildSrc/build/libs/buildSrc-metadata.jar
+/buildSrc/build/libs/cli-tools.buildSrc.jar
+/buildSrc/build/libs/cli-tools.buildSrc-metadata.jar
+/git-sync-runner/gradlew
+/gradlew
+/gradlew.bat
